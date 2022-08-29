@@ -12,10 +12,15 @@ public class Aluno{
         this.curso = curso;
         this.periodo = periodo;
     }
+    private String nome;
     private String matricula;
-    private int notaAV1;
-    private int notaAV2;
-    private int notaAE;
+    private float notaAV1;
+    private float notaAV2;
+    private float notaAE;
     private String curso;
     private String periodo;
 }
+
+    public void SetNome (String Nome){
+
+    }
