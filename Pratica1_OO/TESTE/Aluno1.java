@@ -33,7 +33,7 @@ public class Aluno1 {
         }
         
         public String AvaliarAluno(Double notaAV1, Double notaAV2){
-            if (notaAV1 + notaAV2 >= 60){
+            if (this.notaAV1 + this.notaAV2 >= 60){
                 return "Aprovado";
             } else {
                 return "Recuperação";
