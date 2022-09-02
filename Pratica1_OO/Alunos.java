@@ -6,7 +6,6 @@ import Pratica1_OO.TESTE.Aluno1;
 public class Alunos {
     public static void main(String[] args) throws Exception {
         Scanner ler = new Scanner(System.in);
-        
         String nome;
         String matricula;
         Double notaAV1 = null;
@@ -51,3 +50,4 @@ public class Alunos {
 }
     
 // alunos mocados seria os dados que já estão definidos para teste (pesquisar sobre)
+// precisamos chamar o construtor dentro do print na main.
