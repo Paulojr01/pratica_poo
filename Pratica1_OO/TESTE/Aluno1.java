@@ -41,7 +41,7 @@ public class Aluno1 {
         }
     
         public String AvaliarRecuperação(Double notaAV1, Double notaAV2, Double notaAE){
-            Double media = (notaAV1 + notaAV2 + notaAE)/3;
+            Double media = (notaAV1 + notaAV2 + notaAE)/2;
             if(media >= 60){
                 return "Aprovado";
             } else {
@@ -49,7 +49,7 @@ public class Aluno1 {
             }
             
         }
-    
+     
     
         @Override
         public String toString() {
