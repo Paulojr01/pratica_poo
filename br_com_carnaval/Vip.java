@@ -1,22 +1,28 @@
 package br_com_carnaval;
 
+import java.text.NumberFormat;
+
 public class Vip extends Ingresso {
-    private double getValorAdicional;
-
-    public Vip (double valor_Ingresso) {
-        super(valor_Ingresso);
-      
-    }
+    Double valorAdicional;
     
-    public double getGetValorAdicional() {
-        return getValorAdicional;
-    }
-    public void setGetValorAdicional(double getValorAdicional) {
-        this.getValorAdicional = getValorAdicional;
-    }
-   
-    public String ingressoVip() {
-        return "valor do ingresso Vip: " + getValor_Ingresso() + getValorAdicional;
+    NumberFormat f = NumberFormat.getCurrencyInstance();
 
+
+    public Vip (Double valor, Double valorAdicional) {
+
+        super(valor);
+
+        this.valorAdicional = valorAdicional;
+    }
+
+    public String imprimeValorIngresso(){
+        f.setMaximumFractionDigits(2);
+        return ("O valor do ingresso é " + f.format(this.valor + this.valorAdicional) + " Ingresso VIP");
+    }
+    public Double getValorAdicional() {
+        return valorAdicional;
+    }
+    public void setValorAdicional(Double valorAdicional) {
+        this.valorAdicional = valorAdicional;
     }
 }

@@ -1,32 +1,17 @@
 package br_com_carnaval;
 
 public class Ingresso {
-    private double valor_Ingresso;
-    private double getValorAdicional;
+    Double valor;
 
-    public double getGetValorAdicional() {
-        return getValorAdicional;
+    public Ingresso(Double valor) {
+        this.valor = valor;
     }
 
-    public void setGetValorAdicional(double getValorAdicional) {
-        this.getValorAdicional = getValorAdicional;
+    public Double getValor() {
+        return valor;
     }
 
-    public Ingresso(double valor_Ingresso) {
-        this.valor_Ingresso = valor_Ingresso;
+    public void setValor(Double valor) {
+        this.valor = valor;
     }
-
-    public double getValor_Ingresso() {
-        return valor_Ingresso;
-    }
-
-    public void setValor_Ingresso(double valor_Ingresso) {
-        this.valor_Ingresso = valor_Ingresso;
-    }
-
-
-    public  String Ingresso () {
-        return "Valor ingresso normal: " + getValor_Ingresso();
-    }
-
 }

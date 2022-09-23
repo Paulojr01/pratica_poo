@@ -1,40 +1,48 @@
 package br_com_carnaval;
 
-public class Camarote extends Ingresso {
-    private String localizacao;
-    private double getValorAdicional;
+import java.text.NumberFormat;
 
-    public Camarote(double valor_Ingresso) {
-        super(valor_Ingresso);
-    
+public class Camarote  extends Ingresso{
+
+    public Camarote(Double valor, Double valorAdicional, String localizacao) {
+        super(valor);
+        this.valorAdicional = valorAdicional;
         this.localizacao = localizacao;
-        this.getValorAdicional = getValorAdicional;
     }
-    
+
+
+    Double valorAdicional;
+    String localizacao;
+
+
+
+    NumberFormat f = NumberFormat.getCurrencyInstance();
+
+
+    public String imprimeValorIngresso() {
+        
+        f.setMaximumFractionDigits(2);
+        return ("O valor do ingresso é : " + f.format(this.valor + this.valorAdicional) + " Localizacao : "
+                + this.localizacao + " Ingresso Camarote");
+    }
+
+
+    public Double getValorAdicional() {
+        return valorAdicional;
+    }
+
+
+    public void setValorAdicional(Double valorAdicional) {
+        this.valorAdicional = valorAdicional;
+    }
+
+
     public String getLocalizacao() {
         return localizacao;
     }
 
+
     public void setLocalizacao(String localizacao) {
         this.localizacao = localizacao;
-    }
-    
-    public double getGetValorAdicional() {
-        return getValorAdicional;
-    }
-
-    public void setGetValorAdicional(double getValorAdicional) {
-        this.getValorAdicional = getValorAdicional;
-    }
-
-    public void setValor_Ingresso (double getValorAdicional){
-        this.getValorAdicional = getValorAdicional;
-
-    }
-
-    public String imprimeValor () {
-
-        return "Camarote: " + 
-
     }
 }

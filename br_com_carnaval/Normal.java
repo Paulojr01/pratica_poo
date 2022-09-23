@@ -1,24 +1,17 @@
 package br_com_carnaval;
 
+import java.text.NumberFormat;
+
+
 public class Normal extends Ingresso {
-    private double normal;
+    NumberFormat f = NumberFormat.getCurrencyInstance();
 
-
-    public Normal(double valor_Ingresso) {
-        super(valor_Ingresso);
-        
+    public Normal(Double valor) {
+        super(valor);
     }
 
-    public double getNormal() {
-        return normal;
+    public String imprimeValorIngresso() {
+        f.setMaximumFractionDigits(2);
+        return ("O valor do ingresso é : " + f.format(this.valor ) + " Ingresso Normal");
     }
-    public void setNormal(double normal) {
-        this.normal = normal;
-    }
-
-    public String imprimeValorIngresso(){
-        
-    }
-
-    
 }
