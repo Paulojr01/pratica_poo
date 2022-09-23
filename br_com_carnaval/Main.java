@@ -1,7 +1,5 @@
 package br_com_carnaval;
 
-
-
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
