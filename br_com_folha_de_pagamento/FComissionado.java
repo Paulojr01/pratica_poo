@@ -1,36 +1,19 @@
 package br_com_folha_de_pagamento;
 
-public class FComissionado {
+public class FComissionado  extends Funcionario{
+    
+    public FComissionado(int matricula, String nome, double salario) {
+        super(matricula, nome, salario);
+        //TODO Auto-generated constructor stub
+    }
+
     private double percentual;
-    private double vendas;
-    
-    public FComissionado(double percentual, double vendas) {
-        this.percentual = percentual;
-        this.vendas = vendas;
-    }
+    private  double vendas;
 
-    public double getPercentual() {
-        return percentual;
-    }
-
-    public void setPercentual(double percentual) {
-        this.percentual = percentual;
-    }
-
-    public double getVendas() {
-        return vendas;
-    }
-
-    public void setVendas(double vendas) {
-        this.vendas = vendas;
-    }
-    
-    public  double calcularProventos (double percentual){
-
-        return percentual;
+    @Override
+    public double calcularProventos() {
+        double proventos = super.getSalario() + (this.vendas * this.percentual);
+        return proventos;
         
     }
-    
 }
-
-
