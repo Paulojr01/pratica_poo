@@ -15,3 +15,5 @@ public class FProdutividade extends Funcionario {
     }
 
 }
+
+// quando usamos override não precisamos criar outro metodo exemplo calcularProventos2

@@ -5,7 +5,7 @@ public class Funcionario {
     private int  matricula;
     private String nome;
     private double salario;
-
+    
     public Funcionario(int matricula, String nome, double salario) {
         this.matricula = matricula;
         this.nome = nome;
@@ -32,14 +32,16 @@ public class Funcionario {
 
     public double calcularProventos (){
 
-        return matricula;
+        return salario;
 
     }
+    @Override
+    public String toString() {
+        return "Funcionario [matricula=" + matricula + ", nome=" + nome + ", salario=" + salario + "]";
+    }
 
-    public String toString(){
+    // tostring retorna os dados visiveis 
 
-        return nome;
 
     }
     
-}
