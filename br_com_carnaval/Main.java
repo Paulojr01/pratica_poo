@@ -1,78 +1,52 @@
 package br_com_carnaval;
-
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
 public class Main {
-    static int option;
 
-    static Scanner ler = new Scanner(System.in);
-
-    static Double valor = null;
-    static Double valorAdicional = null;
-    static String localizacao = null;
-
-    public static void main(String[] args) {
-
-        do {
-            option = Integer.parseInt(JOptionPane.showInputDialog("\t(1) Ingresso Normal \n\t(2) VIP  \n\t(3) Camarote\n\t(0) Sair"));
-
-            switch (option) {
-                case 1:
-
-                    valor = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor : "));
-
-                    Normal ingressoNormal = new Normal(valor);
-
-                    JOptionPane.showMessageDialog(null, ingressoNormal.imprimeValorIngresso(), "Ingresso Normal",
-                            JOptionPane.DEFAULT_OPTION);
-
-                    break;
-
-                case 2:
-
-                    valor = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor : "));
-
-                    valorAdicional = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor adicional: "));
-
-                    Vip ingressoVIP = new Vip(valor, valorAdicional);
-
-                    JOptionPane.showMessageDialog(null, ingressoVIP.imprimeValorIngresso(), "Ingresso Normal",
-                            JOptionPane.DEFAULT_OPTION);
-
-                    break;
-
-                case 3:
-
-                    valor = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor : "));
-
-                    valorAdicional = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor adicional: "));
-
-                    localizacao = JOptionPane.showInputDialog("Digite a localização: ");
-
-                    Camarote ingressoCamarote = new Camarote(valor, valorAdicional, localizacao);
-
-                    JOptionPane.showMessageDialog(null, ingressoCamarote.imprimeValorIngresso());
-
-                    break;
-
-                default:
-
-                    JOptionPane.showMessageDialog(null, "Opção inválida");
-
-                    break;
-
-                case 0:
-
-                    JOptionPane.showMessageDialog(null, "Programa encerrado", "Encerramento",
-                            JOptionPane.INFORMATION_MESSAGE);
-
-                    break;
-            }
-
-        } while (option != 0);
-    }
+	public static void main(String[] args) {
+	double valor, valorAdicional;
+	int opcao;
+	String localizacao;
+	
+	Normal ingressoNormal=null;
+	Vip ingressoVip = null;
+	Camarote ingressoCamarote = null;
+	
+	do {
+	 opcao=Integer.parseInt(JOptionPane.showInputDialog("<1> Ingresso Normal\n<2>Ingresso VIP\n<3>Ingresso Camarote\n<4>Sair"));
+	switch (opcao)
+	{
+	case 1:
+		valor=Double.parseDouble(JOptionPane.showInputDialog("Valor do Ingresso:"));
+		ingressoNormal = new Normal(valor);
+		JOptionPane.showMessageDialog(null, ingressoNormal.imprimeIngresso(),"Titulo da janela",JOptionPane.ERROR_MESSAGE);
+		break;
+	case 2:
+		valor=Double.parseDouble(JOptionPane.showInputDialog("Valor do Ingresso:"));
+		valorAdicional=Double.parseDouble(JOptionPane.showInputDialog("Valor Adicional do Ingresso:"));
+		ingressoVip = new Vip(valor,valorAdicional);
+		JOptionPane.showMessageDialog(null, ingressoVip.imprimeIngresso(),"Mensagem",JOptionPane.DEFAULT_OPTION);
+		break;
+	case 3:
+		valor=Double.parseDouble(JOptionPane.showInputDialog("Valor do Ingresso:"));
+		valorAdicional=Double.parseDouble(JOptionPane.showInputDialog("Valor Adicional do Ingresso:"));
+		localizacao = JOptionPane.showInputDialog("Localização:");
+		ingressoCamarote = new Camarote (valor,localizacao,valorAdicional);
+		JOptionPane.showMessageDialog(null, ingressoCamarote.imprimeIngresso(),"Mensagem",JOptionPane.DEFAULT_OPTION);
+		break;
+	case 4:
+        JOptionPane.showMessageDialog(null, "Numero de ingressos vip:" + ingressoVip.numeroVip(), "titulo",JOptionPane.DEFAULT_OPTION);
+        JOptionPane.showMessageDialog(null, "Numero de ingressos Camarote:" + ingressoCamarote.numeroCamarote(), "titulo",JOptionPane.DEFAULT_OPTION);
+		break;
+	default:
+		JOptionPane.showMessageDialog(null, "Escolha corretamente uma opção","Mensagem",JOptionPane.DEFAULT_OPTION);
+		break;
+	}
+	
+	}while(opcao!=4);
+	ingressoCamarote.getValorAdicional();
+	
+	}
 
 }
 

@@ -1,17 +1,22 @@
 package br_com_carnaval;
 
 public class Ingresso {
-    Double valor;
+private double valorIngresso;
 
-    public Ingresso(Double valor) {
-        this.valor = valor;
-    }
+public Ingresso(double valorIngresso) {
+	this.valorIngresso = valorIngresso;
+}
 
-    public Double getValor() {
-        return valor;
-    }
+public double getValorIngresso() {
+	return valorIngresso;
+}
 
-    public void setValor(Double valor) {
-        this.valor = valor;
-    }
+public void setValorIngresso(double valorIngresso) {
+	this.valorIngresso = valorIngresso;
+}
+
+public String imprimeIngresso() {
+	return "Ingresso: " + getValorIngresso();
+}
+
 }
