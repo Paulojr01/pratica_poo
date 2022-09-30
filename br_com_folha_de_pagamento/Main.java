@@ -30,5 +30,9 @@ public class Main {
     // atributo static pertence a classe e não o objeto
     // statico fica default e pode definir como private public etc..
     // objeto abstract não é possível instancia 
-    // classe que não possui atributo são classes concreto
     // faz mocado caso ela não peça pra entrar com os dados
+    // classe abstratas não possui objetos 
+    // consigo mudar valor dos atributos public
+
+
+    // Posso cria uma variavel do tipo da mae abstrata mas ela herda as caracteristicas da filha igual linha Funcionario fp1 = new FPadrao(100, "Maria", 2000);
