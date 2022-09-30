@@ -7,11 +7,10 @@ public class FPadrao extends Funcionario {
         //TODO Auto-generated constructor stub
     }
 
-    @Override
+    @Override 
 
-    public double calcularProventos (){
-        double proventos = getSalario() + 0 ;
-        return proventos;
+    public double calcularProventos (){   
+        return getSalario();
     }
     
 }

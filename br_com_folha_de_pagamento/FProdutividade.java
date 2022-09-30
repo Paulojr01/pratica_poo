@@ -14,6 +14,22 @@ public class FProdutividade extends Funcionario {
         return proventos;
     }
 
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public int getProdução() {
+        return produção;
+    }
+
+    public void setProdução(int produção) {
+        this.produção = produção;
+    }
+
 }
 
 // quando usamos override não precisamos criar outro metodo exemplo calcularProventos2

@@ -9,10 +9,10 @@ public class FComissionado  extends Funcionario{
 
     private double percentual;
     private  double vendas;
-
+    
     @Override
     public double calcularProventos() {
-        double proventos = super.getSalario() + (this.vendas * this.percentual);
+        double proventos = getSalario() + (this.vendas * this.percentual / 100);
         return proventos;
         
     }
