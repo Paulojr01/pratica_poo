@@ -5,10 +5,10 @@ public class FProdutividade extends Funcionario {
     private double valor;
     private int produção;
 
-    public FProdutividade(int matricula, String nome, double salario, double produção, int valor) {
+    public FProdutividade(int matricula, String nome, double salario, int produção, Double valor) {
         super(matricula, nome, salario);
 
-        this.produção = (int) produção;
+        this.produção =  produção;
         this.valor = valor;
     
     }
