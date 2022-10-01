@@ -2,9 +2,9 @@ package br_com_folha_de_pagamento;
 
 public abstract class Funcionario {
     
-    private int matricula;
-    private String nome;
-    private double salario;
+    protected int matricula;
+    protected String nome;
+    protected double salario;
     
     public Funcionario(int matricula, String nome, double salario) {
         this.matricula = matricula;
@@ -34,7 +34,7 @@ public abstract class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario [matricula=" + matricula + ", nome=" + nome + ", salario=" + salario + "]";
+        return "Funcionario [matricula=" + matricula + ", nome=" + nome + ", salario=" + salario +  "]";
     }
 
     // tostring retorna os dados visiveis 

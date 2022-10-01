@@ -1,12 +1,19 @@
 package br_com_folha_de_pagamento;
 
 public class FProdutividade extends Funcionario {
-    public FProdutividade(int matricula, String nome, double salario) {
-        super(matricula, nome, salario);
-        //TODO Auto-generated constructor stub
-    }
+
     private double valor;
     private int produção;
+
+    public FProdutividade(int matricula, String nome, double salario, double produção, int valor) {
+        super(matricula, nome, salario);
+
+        this.produção = (int) produção;
+        this.valor = valor;
+    
+    }
+
+
 
     @Override
     public double calcularProventos(){

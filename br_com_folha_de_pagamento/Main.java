@@ -8,10 +8,10 @@ public class Main {
                 FPadrao fp1 = new FPadrao(100, "Maria", 2000);
                 System.out.println("total proventos" + fp1.calcularProventos());
                 
-                FComissionado FC1 = new FComissionado(105, "JOAO", 2000);
+                FComissionado FC1 = new FComissionado(100, "Joao", 2100, 2, 5);
                 System.out.println("total comissionado" + FC1.calcularProventos());
 
-                FProdutividade fp2 = new FProdutividade(106, "JOSE", 2000);
+                FProdutividade fp2 = new FProdutividade(106, "JOSE", 2000, 5, 5);
                 System.out.println("total produtividade" + fp2.calcularProventos());
 
 
