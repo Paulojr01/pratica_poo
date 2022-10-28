@@ -1,5 +1,7 @@
 package Pratica_Mostra_Dados;
 
+import javax.swing.text.StyledEditorKit.BoldAction;
+
 public class Funcionario extends Pessoa {
         public Funcionario(String nome, String email, String telefone) {
             super(nome, email, telefone);
@@ -45,11 +47,16 @@ public class Funcionario extends Pessoa {
 
 
             public double bonificar(double salario ){
-               salario =  salario + 
+               this.salario =  this.salario + 100;
+                return salario;
+            }
 
-            return salario;
-        
-        }
+            public boolean demitir (){
+
+
+                return esta_Na_Empresa;
+
+            }
 
 }
 
