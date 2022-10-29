@@ -21,7 +21,7 @@ public class Funcionario extends Pessoa {
             this.departamento = departamento;
         }
 
-        public Double getSalario() {
+        public DoublegetSalario() {
             return salario;
         }
 
@@ -47,15 +47,18 @@ public class Funcionario extends Pessoa {
 
 
             public double bonificar(double salario ){
-               this.salario =  this.salario + 100;
-                return salario;
+               this.salario = salario + 100;
+                return this.salario;
             }
 
             public boolean demitir (){
-
+               this.esta_Na_Empresa = false;
 
                 return esta_Na_Empresa;
+            }
 
+            public String mostrarDados(){
+                
             }
 
 }
