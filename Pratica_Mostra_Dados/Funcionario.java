@@ -1,7 +1,5 @@
 package Pratica_Mostra_Dados;
 
-import javax.swing.text.StyledEditorKit.BoldAction;
-
 public class Funcionario extends Pessoa {
         public Funcionario(String nome, String email, String telefone) {
             super(nome, email, telefone);
@@ -12,6 +10,26 @@ public class Funcionario extends Pessoa {
         private Double salario;
         private String entrada_Banco;
         private boolean esta_Na_Empresa;
+        private String rg;
+        
+
+        public Funcionario(String nome, String email, String telefone, String departamento, Double salario,
+                String entrada_Banco, boolean esta_Na_Empresa, String rg) {
+            super(nome, email, telefone);
+            this.departamento = departamento;
+            this.salario = salario;
+            this.entrada_Banco = entrada_Banco;
+            this.esta_Na_Empresa = esta_Na_Empresa;
+            this.rg = rg;
+        }
+
+        public String getRg() {
+            return rg;
+        }
+
+        public void setRg(String rg) {
+            this.rg = rg;
+        }
 
         public String getDepartamento() {
             return departamento;
@@ -21,7 +39,7 @@ public class Funcionario extends Pessoa {
             this.departamento = departamento;
         }
 
-        public DoublegetSalario() {
+        public Double getSalario() {
             return salario;
         }
 
@@ -51,14 +69,16 @@ public class Funcionario extends Pessoa {
                 return this.salario;
             }
 
-            public boolean demitir (){
-               this.esta_Na_Empresa = false;
+            public void demitir (){
+                this.esta_Na_Empresa = false;
+                }
 
-                return esta_Na_Empresa;
-            }
 
-            public String mostrarDados(){
-                
+
+            @Override
+            public String toString () {
+                return "Funcionario [departamento=" + departamento + ", salario=" + salario + ", entrada_Banco="
+                        + entrada_Banco + ", esta_Na_Empresa=" + esta_Na_Empresa + "nome"+ getNome()  + "email" + getEmail() + "telefone" + getTelefone() + "]";
             }
 
 }
